@@ -1,4 +1,6 @@
 # Keyboard-Layout-Optimization
+Term Project for CS464
+
 # Member Information
 | Last Name | First Name | CSU eName | GitHub Username | CSU email address |
 |---|---|---|---|---|
