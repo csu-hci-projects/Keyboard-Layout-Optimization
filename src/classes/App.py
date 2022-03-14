@@ -11,8 +11,13 @@ class App(tk.Tk):
         
         self.textBox = tk.StringVar()
         
+        self.readBox()
         self.typeBox()
         
+    def readBox(self):
+        entry = ttk.Entry(self, state='readonly', textvariable=self.readBox)
+        entry.grid(rowspan=1, columnspan= 100, ipadx= 999, ipady=5)
+        
     def typeBox(self):
-        entry = ttk.Entry(self, state='readonly', textvariable=self.textBox)
+        entry = ttk.Entry(self, state='readonly', textvariable=self.typeBox)
         entry.grid(rowspan=1, columnspan= 100, ipadx= 999, ipady=5)
