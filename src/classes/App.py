@@ -1,7 +1,8 @@
 import tkinter as tk
 from tkinter import ttk
 
-import layouts.QWERTY as QWERTY
+import layouts.Opti as QWERTY
+
 
 class App(tk.Tk):
     
@@ -26,4 +27,4 @@ class App(tk.Tk):
         entry.grid(row=2, columnspan= 100, ipadx= 999, ipady=5)
         
     def keyboard(self):
-        QWERTY.QWERTY()
+        QWERTY.Opti()
