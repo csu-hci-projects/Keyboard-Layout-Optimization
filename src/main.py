@@ -1,5 +1,7 @@
-from classes.App import App
+import app as app
+
+def main():
+    app.start()
 
 if __name__ == "__main__":
-    app = App()
-    app.mainloop()
+    main()
