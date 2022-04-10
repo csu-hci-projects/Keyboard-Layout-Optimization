@@ -6,6 +6,11 @@ hold = " "
 def press(char):
     global hold
     hold += char
+    return hold
+
+def participantInput():
+    global hold
+    return hold   
 
 class Chubon(tk.Tk):
     

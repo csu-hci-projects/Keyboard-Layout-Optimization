@@ -19,8 +19,10 @@ class GUI(tk.Tk):
         self.keyboard()
         
     def readBox(self):
-        entry = ttk.Entry(self, state='readonly', textvariable=self.readBox)
-        entry.grid(row=1, columnspan= 100, ipadx= 999, ipady=5)
+        read = tk.Text(self, height=1, width=50)
+        read.config(state='normal')
+        read.insert(tk.INSERT, "A wizard's job is to vex chumps quickly in fog")
+        read.grid(row=1, columnspan= 60, ipadx= 999, ipady=1)
         
     def typeBox(self):
         entry = ttk.Entry(self, state='readonly', textvariable=self.typeBox)

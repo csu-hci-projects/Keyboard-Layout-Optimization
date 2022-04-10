@@ -8,14 +8,14 @@ def start():
     test0 = kb0.GUI()
     test0.mainloop()
     
-    test1 =  kb1.GUI()
-    test1.mainloop()
+    # test1 =  kb1.GUI()
+    # test1.mainloop()
     
-    test2 = kb2.GUI()
-    test2.mainloop()
+    # test2 = kb2.GUI()
+    # test2.mainloop()
     
-    test3 = kb3.GUI()
-    test3.mainloop()
+    # test3 = kb3.GUI()
+    # test3.mainloop()
     
-    test4 = kb4.GUI()
-    test4.mainloop()
+    # test4 = kb4.GUI()
+    # test4.mainloop()
