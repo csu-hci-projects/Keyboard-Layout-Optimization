@@ -2,8 +2,10 @@ import time
 
 global startTime, endTime
 
-def start():
+def start(entry):
     global startTime
+    
+    entry.delete(0, 'end')
     startTime = time.time()
 
 def end(keyboardApp):

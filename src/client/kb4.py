@@ -5,7 +5,6 @@ from tkinter import ttk
 import layouts.SquareAlphabetic as layout
 import utils.time as time
 
-
 def GUI():    
     keyboardApp = tk.Tk()
     keyboardApp.title('Keyboard Layout Optimization')
@@ -19,7 +18,7 @@ def GUI():
     
     layout.SquareAlphabetic(entry)
     
-    start = ttk.Button(text='START', width=8, command= lambda : time.start())
+    start = ttk.Button(text='START', width=8, command= lambda : time.start(entry))
     start.grid(row=8, column=2)
     
     done = ttk.Button(text='DONE', width=8, command= lambda : time.end(keyboardApp))
