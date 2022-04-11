@@ -1,7 +1,16 @@
 import tkinter as tk
 from tkinter import ttk
 
+inputTxt = ''
+
+def getInputTxt():
+    global inputTxt
+    
+    return inputTxt
+
 def press(click, entry):
+    global inputTxt
+    inputTxt += click
     
     if (click == 'space'):
         entry.insert(tk.END, ' ')

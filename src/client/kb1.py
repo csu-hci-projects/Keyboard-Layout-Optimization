@@ -21,7 +21,7 @@ def GUI():
     start = ttk.Button(text='START', width=8, command= lambda : time.start(entry))
     start.grid(row=6, column=3)
     
-    done = ttk.Button(text='DONE', width=8, command= lambda : time.end(keyboardApp))
+    done = ttk.Button(text='DONE', width=8, command= lambda : time.end(keyboardApp, 'Dvorak'))
     done.grid(row=6, column=5)
     
     keyboardApp.mainloop()
