@@ -1,9 +1,18 @@
 import tkinter as tk
 from tkinter import ttk
 
-def press(click, entry):
+inputTxt = ''
+
+def getInputTxt():
+    global inputTxt
     
-    if (click == 'space'):
+    return inputTxt
+
+def press(click, entry):
+    global inputTxt
+    inputTxt += click
+    
+    if (click == ' '):
         entry.insert(tk.END, ' ')
     else:
         entry.insert(tk.END, click)
@@ -91,5 +100,5 @@ def QWERTY(entry):
     
     
     #SIXTH ROW
-    space = ttk.Button(text = 'Space' , width = 40, command = lambda : press('space', entry))
+    space = ttk.Button(text = 'Space' , width = 40, command = lambda : press(' ', entry))
     space.grid(row = 5 , columnspan= 10, ipadx = 6 , ipady = 10)
