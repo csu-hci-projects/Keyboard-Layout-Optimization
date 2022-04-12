@@ -5,12 +5,14 @@ from tkinter import ttk
 import layouts.SquareAlphabetic as layout
 import utils.time as time
 
+testTxt = 'SYMPATHIZING WOULD FIX QUAKER OBJECTIVES'
+
 def GUI():    
     keyboardApp = tk.Tk()
     keyboardApp.title('Keyboard Layout Optimization')
     keyboardApp.iconbitmap('src/utils/images/hciLogo.ico')
     
-    readTextBox = Label(keyboardApp, text='Sympathizing would fix Quaker objectives', font=('sans', 20))
+    readTextBox = Label(keyboardApp, text=testTxt, font=('sans', 20))
     readTextBox.grid(row=0, columnspan=11)
     
     entry = Entry(keyboardApp, text='', font=('sans', 20))
@@ -21,7 +23,7 @@ def GUI():
     start = ttk.Button(text='START', width=8, command= lambda : time.start(entry))
     start.grid(row=8, column=2)
     
-    done = ttk.Button(text='DONE', width=8, command= lambda : time.end(keyboardApp, 'Square Alphabetic'))
+    done = ttk.Button(text='DONE', width=8, command= lambda : time.end(keyboardApp, 'Square Alphabetic', layout.getInputTxt(), testTxt))
     done.grid(row=8, column=4)
     
     keyboardApp.mainloop()

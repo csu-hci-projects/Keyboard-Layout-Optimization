@@ -1,28 +1,29 @@
 import time
 
 global startTime, endTime
+enable = False
 
 def start(entry):
-    global startTime
+    global startTime, enable
     
-    entry.delete(0, 'end')
-    startTime = time.time()
+    if (enable == False):
+        enable = True
+        entry.delete(0, 'end')
+        startTime = time.time()
 
 def end(keyboardApp, keyboardLayout, inputTxt, testTxt):
     global endTime
     
     endTime = time.time()
-    statistics(endTime- startTime, keyboardLayout, inputTxt, testTxt)
+    statistics(endTime-startTime, keyboardLayout, inputTxt, testTxt)
     
     keyboardApp.destroy()
     
     
 def statistics(recordedTime, keyboardLayout, inputTxt, testTxt):
     print('-----{}-----'.format(keyboardLayout))
+    print('Error Rate', textData(inputTxt, testTxt))
     convertTime(recordedTime)
-    textData(inputTxt, testTxt)
-
-
 
 def convertTime(sec):
     sec = sec % 60
@@ -35,11 +36,33 @@ def textData(inputTxt, testTxt):
     print('Text: {}'.format(testTxt))
     print('Input: {}'.format(inputTxt))
     
-    ER = errorRate(inputTxt, testTxt)
+    return errorRate(inputTxt, testTxt)
 
 def errorRate(inputTxt, testTxt):
     correct = 0
-    for x,y in inputTxt, testTxt:
-        if (x == y):
-            correct += 1
+    mismatch = 0
+    
+    if (len(inputTxt) <= len(testTxt)):
+        mismatch = len(testTxt)
+        for i, char in enumerate(inputTxt):
+            if (char == testTxt[i]):
+                correct += 1
+                mismatch -= 1
+            # else:
+                
+        print('Correct: ', correct)
+        print('In-correct: ', mismatch)
         
+        return correct/len(testTxt)
+    else:
+        mismatch = len(inputTxt)
+        for i, char in enumerate(testTxt):
+            if (char == inputTxt[i]):
+                correct += 1
+                mismatch -= 1
+            # else:
+                
+        print('Correct: ', correct)
+        print('In-correct: ', mismatch)
+        
+        return correct/len(testTxt)

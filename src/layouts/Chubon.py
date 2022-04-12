@@ -12,7 +12,7 @@ def press(click, entry):
     global inputTxt
     inputTxt += click
     
-    if (click == 'space'):
+    if (click == ' '):
         entry.insert(tk.END, ' ')
     else:
         entry.insert(tk.END, click)
@@ -104,5 +104,5 @@ def Chubon(entry):
     W.grid(row = 5 , column = 7, ipadx = 6 , ipady = 10)
     
     #FIFTH ROW
-    space = ttk.Button(text = 'Space' , width = 50, command = lambda : press('space', entry))
+    space = ttk.Button(text = 'Space' , width = 50, command = lambda : press(' ', entry))
     space.grid(row = 6 , columnspan= 10, ipadx = 6 , ipady = 10)
