@@ -12,13 +12,25 @@ def start(entry):
         startTime = time.time()
 
 def end(keyboardApp, keyboardLayout, inputTxt, testTxt):
+    global startTime
     global endTime
     
     endTime = time.time()
+    
     statistics(endTime-startTime, keyboardLayout, inputTxt, testTxt)
     
-    keyboardApp.destroy()
+    closeApp(keyboardApp)
     
+    
+def closeApp(keyboardApp):
+    global startTime
+    global endTime
+    global enable
+    
+    enable = False
+    startTime=0
+    endTime=0
+    keyboardApp.destroy()
     
 def statistics(recordedTime, keyboardLayout, inputTxt, testTxt):
     print('-----{}-----'.format(keyboardLayout))
@@ -33,8 +45,8 @@ def convertTime(sec):
     print("Time: {0}:{1:0.2f}".format(int(mins),sec))
     
 def textData(inputTxt, testTxt):
-    print('Text: {}'.format(testTxt))
-    print('Input: {}'.format(inputTxt))
+    print('Text:{}'.format(testTxt))
+    print('Input:{}'.format(inputTxt))
     
     return errorRate(inputTxt, testTxt)
 
