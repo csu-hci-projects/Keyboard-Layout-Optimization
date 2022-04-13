@@ -11,6 +11,7 @@ def GUI():
     keyboardApp = tk.Tk()
     keyboardApp.title('Keyboard Layout Optimization')
     keyboardApp.iconbitmap('src/utils/images/hciLogo.ico')
+    keyboardApp.attributes('-alpha', 0.7)
     
     readTextBox = Label(keyboardApp, text=testTxt, font=('sans', 20))
     readTextBox.grid(row=0, columnspan=11)
@@ -23,7 +24,7 @@ def GUI():
     start = ttk.Button(text='START', width=8, command= lambda : time.start(entry))
     start.grid(row=6, column=3)
     
-    done = ttk.Button(text='DONE', width=8, command= lambda : time.end(keyboardApp, 'Dvorak', layout.getInputTxt(), testTxt))
+    done = ttk.Button(text='DONE', width=8, command= lambda : time.end(keyboardApp, 'Dvorak Transparent', layout.getInputTxt(), testTxt))
     done.grid(row=6, column=5)
     
     keyboardApp.mainloop()

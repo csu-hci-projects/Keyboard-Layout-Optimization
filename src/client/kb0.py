@@ -16,7 +16,7 @@ def GUI():
     readTextBox.grid(row=0, columnspan=11)
     
     entry = Entry(keyboardApp, text='', font=('sans', 20))
-    entry.grid(row = 1, columnspan=11)
+    entry.grid(row = 1, columnspan=11, ipadx=210, pady=20)
     
     layout.Chubon(entry)
     
