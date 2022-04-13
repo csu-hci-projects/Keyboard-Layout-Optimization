@@ -17,4 +17,5 @@ while keepPlaying:
     for event in pygame.event.get():
         # The 0 button is the 'a' button, 1 is the 'b' button, 2 is the 'x' button, 3 is the 'y' button
         print(event)
-       
+        if event.type == pygame.JOYBUTTONDOWN:
+            print("Joystick button pressed.")
