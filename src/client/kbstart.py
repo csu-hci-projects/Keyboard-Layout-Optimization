@@ -5,3 +5,6 @@ from tkinter import ttk
 import layouts.Chubon as layout
 import utils.time as time
 
+
+testTxt = 'Please enter your name'
+testTxt1 = 'Keyboard Layout Optimization Expirement'
