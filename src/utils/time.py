@@ -11,6 +11,10 @@ def start(entry):
         entry.delete(0, 'end')
         startTime = time.time()
 
+def setUser(newuser):
+    global user 
+    user = newuser
+
 
 def end(keyboardApp, keyboardLayout, inputTxt, testTxt):
     global startTime
