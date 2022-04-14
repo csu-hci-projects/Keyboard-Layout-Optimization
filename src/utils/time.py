@@ -46,6 +46,8 @@ def convertTime(sec):
     print("Time: {0}:{1:0.2f}".format(int(mins),sec))
     
 def textData(inputTxt, testTxt):
+    global user
+    print('Text:{}'.format(user))
     print('Text:{}'.format(testTxt))
     print('Input:{}'.format(inputTxt))
     
