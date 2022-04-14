@@ -1,6 +1,6 @@
 import time
 
-global startTime, endTime
+global startTime, endTime, user
 enable = False
 
 def start(entry):
@@ -10,6 +10,7 @@ def start(entry):
         enable = True
         entry.delete(0, 'end')
         startTime = time.time()
+
 
 def end(keyboardApp, keyboardLayout, inputTxt, testTxt):
     global startTime
