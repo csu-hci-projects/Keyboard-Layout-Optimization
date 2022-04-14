@@ -8,3 +8,10 @@ import utils.time as time
 
 testTxt = 'Please enter your name'
 testTxt1 = 'Keyboard Layout Optimization Expirement'
+
+def GUI():    
+    keyboardApp = tk.Tk()
+    keyboardApp.geometry("800x500")
+  
+
+ 
