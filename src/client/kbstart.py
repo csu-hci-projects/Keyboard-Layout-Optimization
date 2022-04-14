@@ -9,6 +9,12 @@ import utils.time as time
 testTxt = 'Please enter your name'
 testTxt1 = 'Keyboard Layout Optimization Expirement'
 
+def retrieve_input(textBox, keyboardApp):
+    inputValue=textBox.get("1.0","end-1c")
+   
+ 
+    
+
 def GUI():    
     keyboardApp = tk.Tk()
     keyboardApp.geometry("800x500")
