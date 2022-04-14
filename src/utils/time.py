@@ -1,6 +1,6 @@
 import time
 
-global startTime, endTime
+global startTime, endTime, user
 enable = False
 
 def start(entry):
@@ -10,6 +10,11 @@ def start(entry):
         enable = True
         entry.delete(0, 'end')
         startTime = time.time()
+
+def setUser(newuser):
+    global user 
+    user = newuser
+
 
 def end(keyboardApp, keyboardLayout, inputTxt, testTxt):
     global startTime
@@ -45,6 +50,8 @@ def convertTime(sec):
     print("Time: {0}:{1:0.2f}".format(int(mins),sec))
     
 def textData(inputTxt, testTxt):
+    global user
+    print('Text:{}'.format(user))
     print('Text:{}'.format(testTxt))
     print('Input:{}'.format(inputTxt))
     
