@@ -11,8 +11,8 @@ testTxt1 = 'Keyboard Layout Optimization Expirement'
 
 def retrieve_input(textBox, keyboardApp):
     inputValue=textBox.get("1.0","end-1c")
-   
- 
+    
+    keyboardApp.destroy()
     
 
 def GUI():    
