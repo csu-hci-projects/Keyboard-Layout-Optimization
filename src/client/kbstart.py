@@ -22,3 +22,9 @@ def GUI():
     
     textBox=Text(keyboardApp, height=2, width=10)
     textBox.grid(row=2, columnspan=11,ipadx=210, pady=20)
+    
+    buttonCommit=Button(keyboardApp, height=1, width=10, text="Start", 
+                    command=lambda: retrieve_input(textBox, keyboardApp))
+    buttonCommit.grid(row=3, columnspan=11)
+
+    keyboardApp.mainloop()
