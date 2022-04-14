@@ -20,3 +20,5 @@ def GUI():
     readTextBox = Label(keyboardApp, text=testTxt, font=('sans', 20))
     readTextBox.grid(row=1, columnspan=11,ipadx=210, pady=20)
     
+    textBox=Text(keyboardApp, height=2, width=10)
+    textBox.grid(row=2, columnspan=11,ipadx=210, pady=20)
