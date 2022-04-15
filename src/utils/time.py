@@ -51,7 +51,7 @@ def convertTime(sec):
     
 def textData(inputTxt, testTxt):
     global user
-    print('Text:{}'.format(user))
+    print('User:{}'.format(user))
     print('Text:{}'.format(testTxt))
     print('Input:{}'.format(inputTxt))
     
@@ -60,19 +60,22 @@ def textData(inputTxt, testTxt):
 def errorRate(inputTxt, testTxt):
     correct = 0
     mismatch = 0
-    
-    if (len(inputTxt) <= len(testTxt)):
+
+    if len(inputTxt) == 0:
+        return 100.0
+    elif (len(inputTxt) <= len(testTxt)):
         mismatch = len(testTxt)
         for i, char in enumerate(inputTxt):
             if (char == testTxt[i]):
                 correct += 1
                 mismatch -= 1
-            # else:
-                
+              
         print('Correct: ', correct)
         print('In-correct: ', mismatch)
+        if correct == 0:
+            return 100.0
         
-        return correct/len(testTxt)
+        return (1 - correct/len(testTxt)) * 100
     else:
         mismatch = len(inputTxt)
         for i, char in enumerate(testTxt):
@@ -80,8 +83,10 @@ def errorRate(inputTxt, testTxt):
                 correct += 1
                 mismatch -= 1
             # else:
-                
+        
         print('Correct: ', correct)
         print('In-correct: ', mismatch)
+        if correct == 0:
+            return 100.0  
         
-        return correct/len(testTxt)
+        return (1 - correct/len(testTxt)) * 100
