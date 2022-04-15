@@ -87,4 +87,4 @@ def errorRate(inputTxt, testTxt):
         print('In-correct: ', mismatch)
        
         
-        return 0
+        return (1 - correct/len(testTxt)) * 100
