@@ -65,6 +65,7 @@ def errorRate(inputTxt, testTxt):
         return 100.0
     elif (len(inputTxt) <= len(testTxt)):
         mismatch = len(testTxt)
+        inputTxt = inputTxt[0:len(testTxt)]
         for i, char in enumerate(inputTxt):
             if (char == testTxt[i]):
                 correct += 1
