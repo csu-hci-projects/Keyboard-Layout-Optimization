@@ -60,12 +60,11 @@ def textData(inputTxt, testTxt):
 def errorRate(inputTxt, testTxt):
     correct = 0
     mismatch = 0
-
+    inputTxt = inputTxt[0:len(testTxt)]
     if len(inputTxt) == 0:
         return 100.0
     elif (len(inputTxt) <= len(testTxt)):
         mismatch = len(testTxt)
-        inputTxt = inputTxt[0:len(testTxt)]
         for i, char in enumerate(inputTxt):
             if (char == testTxt[i]):
                 correct += 1
