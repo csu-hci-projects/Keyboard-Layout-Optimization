@@ -8,6 +8,7 @@ import utils.time as time
 testTxt = 'WAXY AND QUIVERING JOCKS FUMBLE THE PIZZA'
 
 def GUI():    
+    
     keyboardApp = tk.Tk()
     keyboardApp.title('Keyboard Layout Optimization')
     keyboardApp.iconbitmap('src/utils/images/hciLogo.ico')
@@ -19,6 +20,7 @@ def GUI():
     entry.grid(row = 1, columnspan=11, ipadx=190, pady=20)
     
     layout.Dvorak(entry)
+    layout.clearTxt()
     
     start = ttk.Button(text='START', width=8, command= lambda : time.start(entry))
     start.grid(row=6, column=3)
