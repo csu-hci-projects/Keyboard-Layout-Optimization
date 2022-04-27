@@ -12,13 +12,16 @@ import transparency.kbT4 as kbT4
 
 def start():
     kbstart.GUI()
-
-    #kb0.GUI()
-    
-    #kb1.GUI()
     
     kb2.GUI()
     
+
+    kb0.GUI()
+        
+    kb1.GUI()
+        
+    kb2.GUI()
+
     kb3.GUI()
     
     kb4.GUI()
