@@ -14,14 +14,14 @@ def start():
     kbstart.GUI()
 
     kb0.GUI()
+        
+    kb1.GUI()
+        
+    kb2.GUI()
+        
+    kb3.GUI()
 
-    #kb1.GUI()
-    
-   # kb2.GUI()
-    
-    #kb3.GUI()
-    
-    #kb4.GUI()
+    kb4.GUI()
     
     kbT0.GUI()
     
