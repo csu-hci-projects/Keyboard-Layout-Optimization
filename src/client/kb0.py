@@ -1,3 +1,4 @@
+from re import L
 import tkinter as tk
 from tkinter import Entry, Label
 from tkinter import ttk
@@ -19,11 +20,12 @@ def GUI():
     entry.grid(row = 1, columnspan=11, ipadx=210, pady=20)
     
     layout.Chubon(entry)
+  
     
     start = ttk.Button(text='START', width=8, command= lambda : time.start(entry))
     start.grid(row=10, column=3)
     
     done = ttk.Button(text='DONE', width=8, command= lambda : time.end(keyboardApp, 'Chubon', layout.getInputTxt(), testTxt))
     done.grid(row=10, column=5)
-    
+
     keyboardApp.mainloop()

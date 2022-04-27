@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import Entry, Label
 from tkinter import ttk
 
-import layouts.Chubon as layout
+import layouts.ChubonT as layout
 import utils.time as time
 
 testTxt = 'THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG'
@@ -19,7 +19,8 @@ def GUI():
     entry = Entry(keyboardApp, text='', font=('sans', 20))
     entry.grid(row = 1, columnspan=11, ipadx=210, pady=20)
     
-    layout.Chubon(entry)
+    layout.ChubonT(entry)
+    
     
     start = ttk.Button(text='START', width=8, command= lambda : time.start(entry))
     start.grid(row=10, column=3)

@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import Entry, Label
 from tkinter import ttk
 
-import layouts.Dvorak as layout
+import layouts.DvorakT as layout
 import utils.time as time
 
 testTxt = 'WAXY AND QUIVERING JOCKS FUMBLE THE PIZZA'
@@ -19,7 +19,7 @@ def GUI():
     entry = Entry(keyboardApp, text='', font=('sans', 20))
     entry.grid(row = 1, columnspan=11, ipadx=190, pady=20)
     
-    layout.Dvorak(entry)
+    layout.DvorakT(entry)
     
     start = ttk.Button(text='START', width=8, command= lambda : time.start(entry))
     start.grid(row=6, column=3)

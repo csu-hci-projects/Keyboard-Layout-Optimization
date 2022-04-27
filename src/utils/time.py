@@ -19,11 +19,12 @@ def setUser(newuser):
 def end(keyboardApp, keyboardLayout, inputTxt, testTxt):
     global startTime
     global endTime
+
     
     endTime = time.time()
     
     statistics(endTime-startTime, keyboardLayout, inputTxt, testTxt)
-    
+    inputTxt = ''
     closeApp(keyboardApp)
     
     
@@ -60,12 +61,10 @@ def textData(inputTxt, testTxt):
 def errorRate(inputTxt, testTxt):
     correct = 0
     mismatch = 0
-
     if len(inputTxt) == 0:
         return 100.0
     elif (len(inputTxt) <= len(testTxt)):
         mismatch = len(testTxt)
-        inputTxt = inputTxt[0:len(testTxt)]
         for i, char in enumerate(inputTxt):
             if (char == testTxt[i]):
                 correct += 1
