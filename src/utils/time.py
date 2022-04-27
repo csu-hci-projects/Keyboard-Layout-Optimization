@@ -61,10 +61,6 @@ def textData(inputTxt, testTxt):
 def errorRate(inputTxt, testTxt):
     correct = 0
     mismatch = 0
-    inputTxt = inputTxt[0:len(testTxt)]
-    print(len(testTxt))
-    print(len(inputTxt))
-    print(inputTxt)
     if len(inputTxt) == 0:
         return 100.0
     elif (len(inputTxt) <= len(testTxt)):
