@@ -41,10 +41,9 @@ def closeApp(keyboardApp):
 def statistics(recordedTime, keyboardLayout, inputTxt, testTxt):
     print('-----{}-----'.format(keyboardLayout))
     print('Error Rate', textData(inputTxt, testTxt))
-    convertTime(recordedTime)
+    displayTime(recordedTime)
 
-def convertTime(sec):
-    sec = sec % 60
+def displayTime(sec):
     print("Time: {0} Sec".format(sec))
     
 def textData(inputTxt, testTxt):
