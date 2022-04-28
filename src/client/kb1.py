@@ -21,10 +21,14 @@ def GUI():
     
     layout.Dvorak(entry, False)
 
-    start = ttk.Button(text='START', width=8, command= lambda : time.start(entry))
+    start = ttk.Button(text='START', width=8, command= lambda : startClickEvent(entry, keyboardApp))
     start.grid(row=6, column=3)
     
-    done = ttk.Button(text='DONE', width=8, command= lambda : time.end(keyboardApp, 'Dvorak', layout.getInputTxt(), testTxt))
-    done.grid(row=6, column=5)
+    
     
     keyboardApp.mainloop()
+    
+def startClickEvent(entry, keyboardApp):
+    time.start(entry)
+    done = ttk.Button(text='DONE', width=8, command= lambda : time.end(keyboardApp, 'Dvorak', layout.getInputTxt(), testTxt))
+    done.grid(row=6, column=5)

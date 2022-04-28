@@ -21,10 +21,13 @@ def GUI():
     
     layout.Opti(entry, True)
     
-    start = ttk.Button(text='START', width=8, command= lambda : time.start(entry))
+    start = ttk.Button(text='START', width=8, command= lambda : startClickEvent(entry, keyboardApp))
     start.grid(row=8, column=2)
     
-    done = ttk.Button(text='DONE', width=8, command= lambda : time.end(keyboardApp, 'Opti Transparent', layout.getInputTxt(), testTxt))
-    done.grid(row=8, column=4)
     
     keyboardApp.mainloop()
+    
+def startClickEvent(entry, keyboardApp):
+    time.start(entry)
+    done = ttk.Button(text='DONE', width=8, command= lambda : time.end(keyboardApp, 'Opti Transparent', layout.getInputTxt(), testTxt))
+    done.grid(row=8, column=4)
