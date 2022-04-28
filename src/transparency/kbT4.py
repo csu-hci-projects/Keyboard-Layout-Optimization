@@ -19,7 +19,7 @@ def GUI():
     entry = Entry(keyboardApp, text='', font=('sans', 20))
     entry.grid(row = 1, columnspan=11, ipadx=180, pady=20)
     
-    layout.SquareAlphabetic(entry)
+    layout.SquareAlphabetic(entry, True)
     
     start = ttk.Button(text='START', width=8, command= lambda : time.start(entry))
     start.grid(row=8, column=2)

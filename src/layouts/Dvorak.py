@@ -17,7 +17,11 @@ def press(click, entry):
     else:
         entry.insert(tk.END, click)
 
-def Dvorak(entry):
+def Dvorak(entry, resetInput):
+    
+    if(resetInput):
+        global inputTxt
+        inputTxt = ''
         
     P = ttk.Button(text = 'P' , width = 6, command = lambda : press('P', entry))
     P.grid(row = 2 , column = 3, ipadx = 6 , ipady = 10)

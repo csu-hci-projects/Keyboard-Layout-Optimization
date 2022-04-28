@@ -15,20 +15,20 @@ def start():
 
     kb0.GUI()
         
-    kb1.GUI()
+    # kb1.GUI()
         
-    kb2.GUI()
+    # kb2.GUI()
         
-    kb3.GUI()
+    # kb3.GUI()
     
-    kb4.GUI()
+    # kb4.GUI()
     
     kbT0.GUI()
     
-    kbT1.GUI()
+    # kbT1.GUI()
     
-    kbT2.GUI()
+    # kbT2.GUI()
     
-    kbT3.GUI()
+    # kbT3.GUI()
     
-    kbT4.GUI()
+    # kbT4.GUI()

@@ -23,7 +23,6 @@ def end(keyboardApp, keyboardLayout, inputTxt, testTxt):
     endTime = time.time()
     
     statistics(endTime-startTime, keyboardLayout, inputTxt, testTxt)
-    
     closeApp(keyboardApp)
     
     
@@ -44,10 +43,7 @@ def statistics(recordedTime, keyboardLayout, inputTxt, testTxt):
 
 def convertTime(sec):
     sec = sec % 60
-    mins = sec // 60
-    mins = mins % 60
-    
-    print("Time: {0}:{1:0.2f}".format(int(mins),sec))
+    print("Time: {0} Sec".format(sec))
     
 def textData(inputTxt, testTxt):
     global user
@@ -61,9 +57,7 @@ def errorRate(inputTxt, testTxt):
     correct = 0
     mismatch = 0
 
-    if len(inputTxt) == 0:
-        return 100.0
-    elif (len(inputTxt) <= len(testTxt)):
+    if (len(inputTxt) <= len(testTxt)):
         mismatch = len(testTxt)
         inputTxt = inputTxt[0:len(testTxt)]
         for i, char in enumerate(inputTxt):
@@ -73,21 +67,16 @@ def errorRate(inputTxt, testTxt):
               
         print('Correct: ', correct)
         print('In-correct: ', mismatch)
-        if correct == 0:
-            return 100.0
         
         return (1 - correct/len(testTxt)) * 100
     else:
-        mismatch = len(inputTxt)
+        mismatch = len(testTxt)
         for i, char in enumerate(testTxt):
             if (char == inputTxt[i]):
                 correct += 1
                 mismatch -= 1
-            # else:
         
         print('Correct: ', correct)
         print('In-correct: ', mismatch)
-        if correct == 0:
-            return 100.0  
         
         return (1 - correct/len(testTxt)) * 100

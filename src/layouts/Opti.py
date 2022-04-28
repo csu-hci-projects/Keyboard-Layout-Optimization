@@ -17,7 +17,11 @@ def press(click, entry):
     else:
         entry.insert(tk.END, click)
         
-def Opti(entry):
+def Opti(entry, resetInput):
+    
+    if(resetInput):
+        global inputTxt
+        inputTxt = ''
     
     Q = ttk.Button(text = 'Q' , width = 6, command = lambda : press('Q', entry))
     Q.grid(row = 2 , column = 0, ipadx = 6 , ipady = 10)
