@@ -3,7 +3,7 @@ import tkinter as tk
 from tkinter import Entry, Label
 from tkinter import ttk
 
-import transparency.kbT0 as layout
+import layouts.Chubon as layout
 import utils.time as time
 
 testTxt = 'THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG'
