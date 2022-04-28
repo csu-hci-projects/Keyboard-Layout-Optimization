@@ -17,7 +17,12 @@ def press(click, entry):
     else:
         entry.insert(tk.END, click)
 
-def SquareAlphabetic(entry):
+def SquareAlphabetic(entry, resetInput):
+    
+    if(resetInput):
+        global inputTxt
+        inputTxt = ''
+        
     A = ttk.Button(text = 'A' , width = 6, command = lambda : press('A', entry))
     A.grid(row = 2 , column = 0, ipadx = 6 , ipady = 10)
     

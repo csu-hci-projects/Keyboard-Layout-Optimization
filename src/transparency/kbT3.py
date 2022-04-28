@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import Entry, Label
 from tkinter import ttk
 
-import layouts.QWERTYT as layout
+import layouts.QWERTY as layout
 import utils.time as time
 
 testTxt = 'THE FIVE BOXING WIZARDS JUMP QUICKLY'
@@ -19,7 +19,7 @@ def GUI():
     entry = Entry(keyboardApp, text='', font=('sans', 20))
     entry.grid(row = 1, columnspan=11, ipadx=140, pady=20)
     
-    layout.QWERTYT(entry)
+    layout.QWERTY(entry, True)
     
     start = ttk.Button(text='START', width=8, command= lambda : time.start(entry))
     start.grid(row=6, column=3)

@@ -17,8 +17,12 @@ def press(click, entry):
     else:
         entry.insert(tk.END, click)
 
-def Chubon(entry):
-    inputTxt = '';
+def Chubon(entry, resetInput):
+    
+    if(resetInput):
+        global inputTxt
+        inputTxt = ''
+
     V = ttk.Button(text = 'V' , width = 6, command = lambda : press('V', entry))
     V.grid(row = 2 , column = 4, ipadx = 6 , ipady = 10)
         

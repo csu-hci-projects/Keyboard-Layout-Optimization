@@ -18,7 +18,7 @@ def GUI():
     entry = Entry(keyboardApp, text='', font=('sans', 20))
     entry.grid(row = 1, columnspan=11, ipadx=140, pady=20)
     
-    layout.QWERTY(entry)
+    layout.QWERTY(entry, False)
     
     start = ttk.Button(text='START', width=8, command= lambda : time.start(entry))
     start.grid(row=6, column=3)
