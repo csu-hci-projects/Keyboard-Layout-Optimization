@@ -3,7 +3,7 @@ import tkinter as tk
 from tkinter import Entry, Label
 from tkinter import ttk
 
-import layouts.Chubon as layout
+import transparency.kbT0 as layout
 import utils.time as time
 
 testTxt = 'THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG'
@@ -24,6 +24,7 @@ def GUI():
     entry.grid(row = 1, columnspan=11, ipadx=210, pady=20)
     layout.Chubon(entry, True)
     
+
     keyboardApp.mainloop()
     
 def startClickEvent(entry, keyboardApp):
