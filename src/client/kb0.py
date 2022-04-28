@@ -1,4 +1,3 @@
-from re import L
 import tkinter as tk
 from tkinter import Entry, Label
 from tkinter import ttk
