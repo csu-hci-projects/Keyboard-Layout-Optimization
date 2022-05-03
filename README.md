@@ -12,3 +12,7 @@ Term Project for CS464
 - $ cd Keyboard-Layout-Optimization
 - $ cd src
 - $ python3 main.py
+
+# Links
+- Youtube: https://www.youtube.com/watch?v=WWNwuYkG-cE
+- GitHub: https://github.com/csu-hci-projects/Keyboard-Layout-Optimization
